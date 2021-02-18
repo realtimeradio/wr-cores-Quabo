@@ -1,0 +1,7 @@
+Running: xsim.dir/tx_streamer_behav/xsimk -simmode gui -wdb tx_streamer_behav.wdb -simrunnum 0 -socket 45587
+Design successfully loaded
+Design Loading Memory Usage: 44184 KB (Peak: 44192 KB)
+Design Loading CPU Usage: 30 ms
+Simulation completed
+Simulation Memory Usage: 134308 KB (Peak: 191456 KB)
+Simulation CPU Usage: 50 ms

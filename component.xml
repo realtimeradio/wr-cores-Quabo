@@ -1,0 +1,2591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>user.org</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>wrc_board_quabo_Light</spirit:name>
+  <spirit:version>1.2</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>sfp</spirit:name>
+      <spirit:busType spirit:vendor="user.org" spirit:library="user" spirit:name="sfp" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="user.org" spirit:library="user" spirit:name="sfp_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>sfp_txp_o</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sfp_txp_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>sfp_txn_o</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sfp_txn_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>sfp_rxp_i</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sfp_rxp_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>sfp_rxn_i</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sfp_rxn_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>sfp_mod_def0_i</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sfp_mod_def0_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>sfp_mod_def1_b</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sfp_mod_def1_b</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>sfp_mod_def2_b</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sfp_mod_def2_b</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>sfp_rate_select_o</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sfp_rate_select_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>sfp_tx_fault_i</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sfp_tx_fault_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>sfp_tx_disable_o</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sfp_tx_disable_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>sfp_los_i</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sfp_los_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>uart</spirit:name>
+      <spirit:busType spirit:vendor="user.org" spirit:library="user" spirit:name="uart" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="user.org" spirit:library="user" spirit:name="uart_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>uart_rxd_i</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>uart_rxd_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>uart_txd_o</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>uart_txd_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>reset_i</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>reset_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>flash_spi</spirit:name>
+      <spirit:busType spirit:vendor="user" spirit:library="user" spirit:name="flash_spi" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="user" spirit:library="user" spirit:name="flash_spi_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>spi_ncs_o</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>spi_ncs_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>spi_miso_i</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>spi_miso_i</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>spi_sclk_o</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>spi_sclk_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>spi_mosi_o</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>spi_mosi_o</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>wrc_board_quabo</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>76996c21</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>VHDL</spirit:language>
+        <spirit:modelName>wrc_board_quabo</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>76996c21</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>c64e2842</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_testbench</spirit:name>
+        <spirit:displayName>Test Bench</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation.testbench</spirit:envIdentifier>
+        <spirit:modelName>xrx_stream_l_fsm_sim</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_testbench_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>0a96cdf9</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>clk_20m_vcxo_i</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>clk_125m_gtx_n_i</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>clk_125m_gtx_p_i</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>plldac_sclk_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>plldac_din_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>pll25dac_cs_n_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>pll20dac_cs_n_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sfp_txp_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sfp_txn_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sfp_rxp_i</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sfp_rxn_i</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sfp_mod_def0_i</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sfp_mod_def1_b</spirit:name>
+        <spirit:wire>
+          <spirit:direction>inout</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sfp_mod_def2_b</spirit:name>
+        <spirit:wire>
+          <spirit:direction>inout</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sfp_rate_select_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sfp_tx_fault_i</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sfp_tx_disable_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sfp_los_i</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>onewire_b</spirit:name>
+        <spirit:wire>
+          <spirit:direction>inout</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>uart_rxd_i</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>uart_txd_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>spi_sclk_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>spi_ncs_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>spi_mosi_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>spi_miso_i</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>reset_i</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>clk_ext_10m</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>pps_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>clk_sys_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="string">
+        <spirit:name>g_dpram_initf</spirit:name>
+        <spirit:displayName>G Dpram Initf</spirit:displayName>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.g_dpram_initf">/home/wei/Desktop/wrc_phy16_no_arp_sdb.bram</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>g_simulation</spirit:name>
+        <spirit:displayName>G Simulation</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.g_simulation">0</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/jtag_cores.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/platform/generic/jtag_tap.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_include.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_adder.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_addsub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_logic_op.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/platform/generic/lm32_multiplier.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_shifter.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_onewire_master/sockit_owm.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrx_streamers_light/delay_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>syn/wrc_board_quabo_ip/wrc_board_quabo_ip.srcs/sources_1/imports/wr_streamers/delay_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>syn/wrc_board_quabo_ip/wrc_board_quabo_ip.srcs/sources_1/new/delay_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>syn/wrc_board_quabo_ip/wrc_board_quabo_ip.srcs/sources_1/imports/wr_streamers/delay_six_cyc.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_tbi_phy/disparity_gen_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/genram_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gencores_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/timing/dmtd_phase_meas.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/timing/dmtd_with_deglitcher.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/dropping_buffer.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wishbone_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/fabric/wr_fabric_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_hdr_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_internals_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_cfg_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_checksum.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_commit_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_eth_rx.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_eth_tx.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/etherbone_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_ethernet_slave.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_pass_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_slave_fsm.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_slave_top.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_stream_narrow.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_stream_widen.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_tag_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_tx_mux.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_wbm_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/endpoint_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_registers_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/endpoint_private_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_1000basex_pcs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_autonegotiation.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_clock_alignment_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_crc32_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_leds_controller.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_packet_filter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_pcs_tbi_mdio_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rtu_header_extract.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_buffer.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_crc_size_check.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_early_address_match.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_oob_insert.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_path.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_pcs_16bit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_pcs_8bit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_status_reg_insert.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_vlan_unit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_wb_master.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_sync_detect.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_sync_detect_16bit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_timestamping_unit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_ts_counter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_crc_inserter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_header_processor.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_inject_ctrl.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_packet_injection.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_path.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_pcs_16bit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_pcs_8bit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_vlan_unit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_wishbone_controller.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/escape_inserter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_crc_gen.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_extend_pulse.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_frequency_meter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_pulse_synchronizer.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_pulse_synchronizer2.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_reset.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/xilinx/gc_shiftreg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_sync_ffs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_sync_register.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/generic/generic_async_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/memory_loader_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/xilinx/generic_dpram.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/xilinx/generic_dpram_dualclock.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/xilinx/generic_dpram_sameclock.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/xilinx/generic_dpram_split.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/common/generic_shiftreg_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/xilinx/generic_simple_dpram.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/generic/generic_sync_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/gtp_bitslide.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/spartan6/gtp_phase_align.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/common/inferred_async_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/common/inferred_sync_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_dp_ram.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_ram.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wbgen2/wbgen2_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_mini_nic/minic_wbgen2_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_mini_nic/minic_wb_slave.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_pps_gen/pps_gen_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/timing/pulse_stamper.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_crossbar/sdb_rom.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/simple_uart_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/simple_uart_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_softpll_ng/softpll_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_dacs/spec_serial_dac.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_dacs/spec_serial_dac_arb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_softpll_ng/spll_aligner.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_softpll_ng/spll_wbgen2_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_softpll_ng/spll_wb_slave.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wrc_syscon_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wrc_diags_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wrcore_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/streamers_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/wr_streamers_wbgen2_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/streamers_priv_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/uart_async_rx.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/uart_async_tx.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/uart_baud_gen.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_onewire_master/wb_onewire_master.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/wb_simple_uart.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_slave_adapter/wb_slave_adapter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wbgen2/wbgen2_eic.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wbgen2/wbgen2_fifo_sync.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/family7-gtp/whiterabbit_gtpe2_channel_wrapper.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/family7-gtp/whiterabbit_gtpe2_channel_wrapper_gt.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/family7-gtp/whiterabbit_gtpe2_channel_wrapper_gtrxreset_seq.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/family7-gtx/whiterabbit_gtxe2_channel_wrapper_gt.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/spartan6/whiterabbitgtp_wrapper_tile_spartan6.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>board/common/wr_board_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wr_core.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/wr_endpoint.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/family7-gtp/wr_gtp_phy_family7.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/spartan6/wr_gtp_phy_spartan6.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/family7-gtx/wr_gtx_phy_family7.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_mini_nic/wr_mini_nic.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_pps_gen/wr_pps_gen.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>board/quabo/wr_quabo_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_softpll_ng/wr_softpll_ng.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/wr_streamers_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_xilinx_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wrc_diags_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wrc_syscon_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wrc_periph.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/xrtx_streamers_stats.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>syn/wrc_board_quabo_ip/wrc_board_quabo_ip.srcs/sources_1/new/xrx_stream_l_fsm.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>syn/wrc_board_quabo_ip/wrc_board_quabo_ip.srcs/sources_1/imports/wr_streamers/xrx_streamer_light.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/xrx_streamers_stats.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/xtx_streamer.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/xtx_streamers_stats.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_crossbar/xwb_crossbar.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_dpram/xwb_dpram.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/fabric/xwb_fabric_sink.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/fabric/xwb_fabric_source.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_onewire_master/xwb_onewire_master.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_crossbar/xwb_sdb_crossbar.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/xwb_simple_uart.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/xwr_core.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/xwr_endpoint.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_mini_nic/xwr_mini_nic.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_pps_gen/xwr_pps_gen.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_softpll_ng/xwr_softpll_ng.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/xwr_streamers.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>board/common/xwrc_board_common.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>board/quabo/xwrc_board_quabo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/xwrc_diags_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/xwrc_platform_xilinx.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/fabric/xwrf_mux.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>board/quabo/wrc_board_quabo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f5e58758</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/jtag_cores.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/platform/generic/jtag_tap.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_include.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_adder.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_addsub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/generated/lm32_allprofiles.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_logic_op.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/platform/generic/lm32_multiplier.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_shifter.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_onewire_master/sockit_owm.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrx_streamers_light/delay_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>syn/wrc_board_quabo_ip/wrc_board_quabo_ip.srcs/sources_1/imports/wr_streamers/delay_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>syn/wrc_board_quabo_ip/wrc_board_quabo_ip.srcs/sources_1/new/delay_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>syn/wrc_board_quabo_ip/wrc_board_quabo_ip.srcs/sources_1/imports/wr_streamers/delay_six_cyc.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_tbi_phy/disparity_gen_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/genram_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gencores_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/timing/dmtd_phase_meas.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/timing/dmtd_with_deglitcher.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/dropping_buffer.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wishbone_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/fabric/wr_fabric_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_hdr_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_internals_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_cfg_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_checksum.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_commit_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_eth_rx.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_eth_tx.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/etherbone_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_ethernet_slave.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_pass_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_slave_fsm.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_slave_top.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_stream_narrow.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_stream_widen.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_tag_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_tx_mux.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/etherbone-core/hdl/eb_slave_core/eb_wbm_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/endpoint_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_registers_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/endpoint_private_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_1000basex_pcs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_autonegotiation.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_clock_alignment_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_crc32_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_leds_controller.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_packet_filter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_pcs_tbi_mdio_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rtu_header_extract.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_buffer.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_crc_size_check.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_early_address_match.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_oob_insert.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_path.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_pcs_16bit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_pcs_8bit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_status_reg_insert.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_vlan_unit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_rx_wb_master.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_sync_detect.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_sync_detect_16bit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_timestamping_unit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_ts_counter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_crc_inserter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_header_processor.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_inject_ctrl.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_packet_injection.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_path.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_pcs_16bit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_pcs_8bit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_tx_vlan_unit.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/ep_wishbone_controller.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/escape_inserter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_crc_gen.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_extend_pulse.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_frequency_meter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_pulse_synchronizer.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_pulse_synchronizer2.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_reset.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/xilinx/gc_shiftreg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_sync_ffs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/common/gc_sync_register.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/generic/generic_async_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/memory_loader_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/xilinx/generic_dpram.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/xilinx/generic_dpram_dualclock.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/xilinx/generic_dpram_sameclock.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/xilinx/generic_dpram_split.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/common/generic_shiftreg_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/xilinx/generic_simple_dpram.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/generic/generic_sync_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/gtp_bitslide.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/spartan6/gtp_phase_align.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/common/inferred_async_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/genrams/common/inferred_sync_fifo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_dp_ram.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/src/lm32_ram.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wbgen2/wbgen2_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_mini_nic/minic_wbgen2_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_mini_nic/minic_wb_slave.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_pps_gen/pps_gen_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/timing/pulse_stamper.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_crossbar/sdb_rom.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/simple_uart_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/simple_uart_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_softpll_ng/softpll_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_dacs/spec_serial_dac.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_dacs/spec_serial_dac_arb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_softpll_ng/spll_aligner.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_softpll_ng/spll_wbgen2_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_softpll_ng/spll_wb_slave.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wrc_syscon_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wrc_diags_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wrcore_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/streamers_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/wr_streamers_wbgen2_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/streamers_priv_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/uart_async_rx.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/uart_async_tx.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/uart_baud_gen.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_onewire_master/wb_onewire_master.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/wb_simple_uart.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_slave_adapter/wb_slave_adapter.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wbgen2/wbgen2_eic.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wbgen2/wbgen2_fifo_sync.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/family7-gtp/whiterabbit_gtpe2_channel_wrapper.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/family7-gtp/whiterabbit_gtpe2_channel_wrapper_gt.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/family7-gtp/whiterabbit_gtpe2_channel_wrapper_gtrxreset_seq.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/family7-gtx/whiterabbit_gtxe2_channel_wrapper_gt.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/spartan6/whiterabbitgtp_wrapper_tile_spartan6.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>board/common/wr_board_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wr_core.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/wr_endpoint.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/family7-gtp/wr_gtp_phy_family7.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/spartan6/wr_gtp_phy_spartan6.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_gtp_phy/family7-gtx/wr_gtx_phy_family7.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_mini_nic/wr_mini_nic.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_pps_gen/wr_pps_gen.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>board/quabo/wr_quabo_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_softpll_ng/wr_softpll_ng.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/wr_streamers_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/wr_xilinx_pkg.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wrc_diags_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wrc_syscon_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/wrc_periph.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/xrtx_streamers_stats.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>syn/wrc_board_quabo_ip/wrc_board_quabo_ip.srcs/sources_1/new/xrx_stream_l_fsm.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>syn/wrc_board_quabo_ip/wrc_board_quabo_ip.srcs/sources_1/imports/wr_streamers/xrx_streamer_light.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/xrx_streamers_stats.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/xtx_streamer.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/xtx_streamers_stats.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_crossbar/xwb_crossbar.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_dpram/xwb_dpram.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/fabric/xwb_fabric_sink.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/fabric/xwb_fabric_source.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_lm32/generated/xwb_lm32.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_onewire_master/xwb_onewire_master.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_crossbar/xwb_sdb_crossbar.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_cores/general-cores/modules/wishbone/wb_uart/xwb_simple_uart.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/xwr_core.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_endpoint/xwr_endpoint.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_mini_nic/xwr_mini_nic.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_pps_gen/xwr_pps_gen.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_softpll_ng/xwr_softpll_ng.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wr_streamers/xwr_streamers.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>board/common/xwrc_board_common.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>board/quabo/xwrc_board_quabo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/wrc_core/xwrc_diags_wb.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>platform/xilinx/xwrc_platform_xilinx.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>modules/fabric/xwrf_mux.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>board/quabo/wrc_board_quabo.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/wrc_board_quabo_Light_v1_2.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_c64e2842</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_testbench_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>syn/wrc_board_quabo_ip/wrc_board_quabo_ip.srcs/sim_1/new/xrx_stream_l_fsm_sim.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_testbench</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>wrc_for_quabo_v1_2(wr_core_v4.2)</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>g_dpram_initf</spirit:name>
+      <spirit:displayName>G Dpram Initf</spirit:displayName>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.g_dpram_initf">/home/wei/Desktop/wrc_phy16_no_arp_sdb.bram</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>g_simulation</spirit:name>
+      <spirit:displayName>G Simulation</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.g_simulation">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">wrc_board_quabo_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>wrc_for_quabo_v1_2</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>user.org:user:wrc_board_quabo_Light:1.1</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2019-12-09T19:07:18Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@529e3652_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e6a5939_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e9b0e9_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e840c7_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a465611_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a19dc40_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fa195f3_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7964ac8b_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66ce390d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cf5b7c1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c82e09_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@461ee44e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c051af0_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f5641db_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bdd7d9d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fb14ce9_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cc76cfe_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77dfbd7a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@757b106b_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50722184_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7824f3f6_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31874b50_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5da51079_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6391286_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55e66af3_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63b43e93_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6071a315_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3130a2c7_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79a49c70_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ad3e317_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24d7661d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c64af6c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40f6d49c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ef334e7_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69733618_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b087e97_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d0cc27a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@abee284_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e5b5f62_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5aeca862_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@435d228_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67489cae_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12f4dd28_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76a6cde4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39328b54_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6107b015_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fb020fd_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@679c2279_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d26e697_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1921b5f9_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@751fa88f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7197e0ef_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f78cb76_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67f4b238_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f3c7007_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@147bdf53_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@398f7cf0_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11b13a5a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30ef5dab_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ebb9694_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2492a0bb_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c809f42_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6eb50b8a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e6d7bb2_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@379b21fe_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3699a2e6_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1eaa3b03_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c1726eb_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@af408bd_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ebdf3e4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73a1158f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@750d8774_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@599f6a81_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@264e4917_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c08b3cd_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@aafe33d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e48255d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5849ee82_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e7a8510_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bd3b6da_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1316a8c5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a5f24f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24616561_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a4ca234_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52040970_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d707995_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39670cf5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@530f45ac_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ea15951_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78b3b686_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d60706_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4189944f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d0395a7_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23913f6c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6118b40c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ed984b3_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c98fba1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c13155d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50399f8e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54cb781f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4882619e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dbb2ee_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1564f59c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c30395c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18cf62ab_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@494fd726_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bb67265_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70c927bf_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@387a1acd_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4129452_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a754377_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6edcf208_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70359d29_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47fb88c3_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20dc1904_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36b24da5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fa7ffa7_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65776ef4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77a0c384_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51727bb6_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ed7ff98_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ed4b2c8_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13441c2e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41ecc841_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5211906a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f60ccb4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2582e4cc_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57561945_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c9869a9_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ade2fb6_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fc97fa3_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35412bdf_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e466bf7_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10be369_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21adc426_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@620f3ba9_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12efbf85_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35c319c6_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48257ab3_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65a4a521_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44f029b4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13618742_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4079268d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bf04a4f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6abd5c0d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dbbd9b0_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4be3b866_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6817fd5a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@772e0b36_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4590826e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@140e360_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6145991f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19c8d4ab_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae982c8_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40d346f4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55e1bae1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4881f4bd_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7da18338_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69f1e38a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d27a182_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cd47125_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d944723_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fd651fe_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@170cd733_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e06cdfe_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a393c8e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@525f6c50_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bde307d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fd10bac_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b5c8b48_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78f1758_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41a8b09c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35ae648e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@462c2375_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9a2972e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b160a6c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15a45817_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c4f4e7_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fd42467_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3886823_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@380eaf1f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12a4055e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f7882e0_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6292bcea_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bd07fed_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@743fd6d9_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1efda7f6_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70ccabcc_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5575f7a6_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77f43f99_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@121ac24f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b5e5d97_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22ad3c9e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27e9d407_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35b4bdb4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fc8bbeb_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@461078d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@763458e1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40b0de4a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@510b2edf_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c3beb6_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28302b2f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23727b8c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fa721e6_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c880a78_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2898f545_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35348c9f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@305fd67f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31f7752_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@718785cb_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79ae57bf_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a761163_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5709f5b8_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30a7903_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@624ae198_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13f373f8_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d849490_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b07b43f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b72582a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42510920_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e58b63d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13533593_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b9c4c98_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c149d42_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@772ea0fa_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@127fea75_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54d63a77_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8fe2a9b_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f0993df_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f972ab8_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@626fcbb1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d0a55b5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50bdf394_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61a5ce80_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@520fb035_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e11956b_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6069d1b8_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28494d73_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@228f34d5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fe64e55_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@224d950f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48ee6521_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fbc8280_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22b0df4c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b3f7951_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f98efe7_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d2d2592_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@135173d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c3b6a51_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36788e70_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@132eab04_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41d71a0_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bc96547_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79117d6b_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bfdf9fa_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@103e071c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3650e2d0_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10cee322_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59120714_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f6f4d96_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7454e8cc_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69e5892_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71d6e0a3_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@625309e5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cfaec0d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f164a30_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b2f3ee3_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78f0c27e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10621ce1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d92c479_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54c6524f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@390403d4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@496ea2d7_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60edcf56_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11ba297f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3007e0b1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bc6cc00_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3699678f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@359093f5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ef88789_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40d08e30_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@600933ef_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46689fc4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e109f31_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a39a1a9_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5954f6d7_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f9f35a0_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46fb2d1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@763b0cbb_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27bc18e4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f26537b_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fc9a001_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52adbb6c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4af5ec1b_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c932867_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ba7dd77_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26a539f2_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bc2657a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@341fe84b_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6125f846_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40b1d000_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@326ad1fb_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9f1dd8c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a062dd9_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25bb577d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@233cafce_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d58ada1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae2b297_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f20279f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@531a33a6_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b71f7b1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61584329_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18f061eb_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74eda724_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a7bfea6_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d650e66_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e5fc37d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18b3acf5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55582cbb_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b22e1c6_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49ca014f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48964bb1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5697f151_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c821e1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6109b390_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a1e4e63_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fadf4df_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@352a053e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4636ec7a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d2703d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1099adc7_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c8676e7_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17e7e377_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a982b0b_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@159e1a6e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ac7d4c4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c778144_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fa369d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c19669b_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23d68c9e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72447b87_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dfd2fb9_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45a59aa5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b518436_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6efbbb45_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c519cd5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@eba0455_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@172abb27_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fc4ba6e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43410f9_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f130476_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5967e4aa_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16df699e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13a88736_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@306226e5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@124dad4a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@460e4272_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e0e158f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42511fd3_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26444d62_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c7844f1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31f4e5ca_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f71ddb3_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7210a5d8_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6767594_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7212822e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12e6e4b2_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@419cd685_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e1c5d7a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7505ca8c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13a8792_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1770cb42_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73136fdc_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1617f4c9_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69191d54_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9657881_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33b8b836_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b918a49_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@413906f1_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f227c2e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b920747_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33b63ced_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e7fe9c5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ffaa906_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@318fb982_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38f7866_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4390b89c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f97d088_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4725707f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1920eac2_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1be87691_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fc19385_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44af0b3d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@169a2c10_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f3148d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e43a664_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37a2ea0f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5485a2cb_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6847bfcf_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dee16c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c22d73_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c1ef12b_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f255b4f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4efe2a36_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4420fef8_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9572a58_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67cc11f2_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62e270de_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@248fbb98_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ee9e32_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@670a8188_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4786cb51_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@192111ce_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@647db26_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69c5f457_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36096378_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f1f2d42_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d56316c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@140dd35d_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69fb46ba_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ddd262e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@262599fd_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75cab2af_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c4e07e5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@917cd7a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12a79243_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fb56332_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45bd58a4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ba04f2e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56fc2860_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a68b95c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dc80bc7_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1356fa9b_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fa05121_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64eb4082_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47dcfe53_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19806e8c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20bbf935_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c8f7983_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53413e90_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56c22360_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f3484fc_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a336e57_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@576dd624_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59e12de4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37ca234c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3360d780_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d4bf5b8_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d8d0cfb_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65620919_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@120cc0b6_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1315787_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f166cd_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3102d4bc_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78939d5e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2db6491f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e78fbdb_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/IP_Cores_PanoSETI/wr_cores_panoseti/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a28acad_ARCHIVE_LOCATION">c:/XilinxProjects/PANOSETI/QuadrantBoard/quabo5/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65c6dce0_ARCHIVE_LOCATION">c:/XilinxProjects/PANOSETI/QuadrantBoard/quabo5/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62f29c47_ARCHIVE_LOCATION">c:/XilinxProjects/PANOSETI/QuadrantBoard/quabo5/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@689d0e7b_ARCHIVE_LOCATION">c:/XilinxProjects/PANOSETI/QuadrantBoard/quabo5/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34fbb07_ARCHIVE_LOCATION">c:/XilinxProjects/PANOSETI/QuadrantBoard/quabo5/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bb44d68_ARCHIVE_LOCATION">c:/XilinxProjects/PANOSETI/QuadrantBoard/quabo5/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20ae53d0_ARCHIVE_LOCATION">c:/XilinxProjects/PANOSETI/QuadrantBoard/quabo5/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@303fd068_ARCHIVE_LOCATION">c:/XilinxProjects/PANOSETI/QuadrantBoard/quabo5/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d4f1126_ARCHIVE_LOCATION">c:/XilinxProjects/PANOSETI/QuadrantBoard/quabo5/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@553aeff1_ARCHIVE_LOCATION">c:/XilinxProjects/PANOSETI/QuadrantBoard/quabo5/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54e244a0_ARCHIVE_LOCATION">c:/XilinxProjects/PANOSETI/QuadrantBoard/quabo5/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d6bc04f_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c30e24e_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15945658_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2591efd4_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35ea0396_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16db431c_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dbb02dd_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@118858f5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70c58e81_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c513ff9_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77903e4a_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2967c08_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56a83dce_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ade2869_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57f7abb5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cc72cc5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b99f0a0_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1da12996_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fb75ad5_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25528141_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31fc750_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d6961b_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ab32085_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@320f2bc3_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73a5aad0_ARCHIVE_LOCATION">/media/wei/DATA/LW/Project/Vivado_Project/Panoseti/V008_2/quabo_master_V8_2/quabo_master/ip_repo/wr-cores-Quabo</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3_AR71948</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="dd39bb1a"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="056ead0a"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="25bcf588"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="6029db69"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="7cc1b723"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

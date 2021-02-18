@@ -1,0 +1,32 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../ip_cores/general-cores/modules/genrams/genram_pkg.vhd" \
+"../../../../../../ip_cores/general-cores/modules/wishbone/wishbone_pkg.vhd" \
+"../../../../../../ip_cores/general-cores/modules/common/gencores_pkg.vhd" \
+"../../../../../../modules/fabric/wr_fabric_pkg.vhd" \
+"../../../../../../modules/wr_endpoint/endpoint_pkg.vhd" \
+"../../../../../../modules/wr_streamers/escape_inserter.vhd" \
+"../../../../../../ip_cores/general-cores/modules/common/gc_crc_gen.vhd" \
+"../../../../../../ip_cores/general-cores/modules/genrams/xilinx/gc_shiftreg.vhd" \
+"../../../../../../ip_cores/general-cores/modules/genrams/memory_loader_pkg.vhd" \
+"../../../../../../ip_cores/general-cores/modules/genrams/xilinx/generic_dpram.vhd" \
+"../../../../../../ip_cores/general-cores/modules/genrams/xilinx/generic_dpram_dualclock.vhd" \
+"../../../../../../ip_cores/general-cores/modules/genrams/xilinx/generic_dpram_sameclock.vhd" \
+"../../../../../../ip_cores/general-cores/modules/genrams/xilinx/generic_dpram_split.vhd" \
+"../../../../../../ip_cores/general-cores/modules/genrams/common/generic_shiftreg_fifo.vhd" \
+"../../../../../../ip_cores/general-cores/modules/genrams/generic/generic_sync_fifo.vhd" \
+"../../../../../../ip_cores/general-cores/modules/genrams/common/inferred_sync_fifo.vhd" \
+"../../../../../../modules/timing/pulse_stamper.vhd" \
+"../../../../../../modules/wrc_core/wrc_syscon_pkg.vhd" \
+"../../../../../../modules/wrc_core/wrc_diags_pkg.vhd" \
+"../../../../../../modules/wr_softpll_ng/softpll_pkg.vhd" \
+"../../../../../../modules/wrc_core/wrcore_pkg.vhd" \
+"../../../../../../modules/wr_streamers/streamers_pkg.vhd" \
+"../../../../../../modules/wr_streamers/wr_streamers_wbgen2_pkg.vhd" \
+"../../../../../../modules/wr_streamers/streamers_priv_pkg.vhd" \
+"../../../../../../modules/wr_streamers/xtx_streamer.vhd" \
+"../../../../../../modules/fabric/xwb_fabric_source.vhd" \
+"../../../../../../modules/wr_streamers/tx_streamer.vhd" \
+
+# Do not sort compile order
+nosort

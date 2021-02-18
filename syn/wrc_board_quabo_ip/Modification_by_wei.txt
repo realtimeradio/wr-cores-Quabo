@@ -1,0 +1,9 @@
+This dir is copied from wrc_board_fasec_ip
+1. in build.tcl:
+
+2. in wrc_board_clbv2_ip.tcl:
+(1) name is modified from wrc_board_fasec_ip.tcl
+(2) all the "fasec" in this doc in modifed to "clbv2"
+(3) "ip_output_repo" is modified to the true path
+(4) part is modified to "xc7k160tfbg676-1"
+(5) "2016" in this file is modified to "2018"(because we use vivado 2018)

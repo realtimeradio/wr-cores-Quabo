@@ -1,0 +1,49 @@
+// BMM LOC annotation file.
+//
+// Release 14.6 -  P.20131013, build 3.0.10 Apr 3, 2013
+// Copyright (c) 1995-2019 Xilinx, Inc.  All rights reserved.
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Address space 'lm32_wrpc_memory' 0x00000000:0x0001FFFF (128 KBytes).
+//
+///////////////////////////////////////////////////////////////////////////////
+
+ADDRESS_SPACE lm32_wrpc_memory RAMB32 [0x00000000:0x0001FFFF]
+    BUS_BLOCK
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram38 RAMB32 [31:31] [0:32767] PLACED = X3Y32;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram37 RAMB32 [30:30] [0:32767] PLACED = X2Y33;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram36 RAMB32 [29:29] [0:32767] PLACED = X3Y34;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram35 RAMB32 [28:28] [0:32767] PLACED = X5Y36;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram34 RAMB32 [27:27] [0:32767] PLACED = X3Y31;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram33 RAMB32 [26:26] [0:32767] PLACED = X3Y33;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram32 RAMB32 [25:25] [0:32767] PLACED = X4Y32;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31 RAMB32 [24:24] [0:32767] PLACED = X4Y38;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram28 RAMB32 [23:23] [0:32767] PLACED = X3Y30;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram27 RAMB32 [22:22] [0:32767] PLACED = X2Y30;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram26 RAMB32 [21:21] [0:32767] PLACED = X6Y29;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram25 RAMB32 [20:20] [0:32767] PLACED = X6Y28;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram24 RAMB32 [19:19] [0:32767] PLACED = X3Y27;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram23 RAMB32 [18:18] [0:32767] PLACED = X3Y28;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram22 RAMB32 [17:17] [0:32767] PLACED = X1Y31;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram21 RAMB32 [16:16] [0:32767] PLACED = X0Y31;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram18 RAMB32 [15:15] [0:32767] PLACED = X0Y29;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram17 RAMB32 [14:14] [0:32767] PLACED = X1Y32;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram16 RAMB32 [13:13] [0:32767] PLACED = X0Y33;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram15 RAMB32 [12:12] [0:32767] PLACED = X0Y32;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram14 RAMB32 [11:11] [0:32767] PLACED = X0Y30;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram13 RAMB32 [10:10] [0:32767] PLACED = X0Y28;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram12 RAMB32 [9:9] [0:32767] PLACED = X1Y28;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram11 RAMB32 [8:8] [0:32767] PLACED = X1Y30;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram08 RAMB32 [7:7] [0:32767] PLACED = X1Y33;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram07 RAMB32 [6:6] [0:32767] PLACED = X1Y27;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram06 RAMB32 [5:5] [0:32767] PLACED = X1Y34;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram05 RAMB32 [4:4] [0:32767] PLACED = X1Y29;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram04 RAMB32 [3:3] [0:32767] PLACED = X2Y23;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram03 RAMB32 [2:2] [0:32767] PLACED = X2Y26;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram02 RAMB32 [1:1] [0:32767] PLACED = X2Y24;
+        cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram01 RAMB32 [0:0] [0:32767] PLACED = X2Y25;
+    END_BUS_BLOCK;
+END_ADDRESS_SPACE;
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5d -->
+<!-- CreationDate: Thu Dec 14 10:40:14 2017 -->
+<!-- Magnification: 1.050 -->
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="6.9in" height="4.2in"
+	viewBox="2349 3530 8292 4985">
+<g style="stroke-width:.025in; fill:none">
+<!-- Line: box -->
+<rect x="2598" y="3543" width="7795" height="4960" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="2362" y="4251" width="1181" height="4015" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="9448" y="4251" width="1181" height="4015" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line -->
+<polyline points="3779,4251
+3779,8267
+9212,8267
+9212,5669
+8031,5669
+8031,7086
+4488,7086
+4488,4251
+3779,4251
+" style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4724" y="6141" width="2362" height="708" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4724" y="4251" width="2834" height="708" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="4724" y="5196" width="2834" height="708" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Line: box -->
+<rect x="8031" y="4251" width="1181" height="1181" rx="0" 
+style="stroke:#000000;stroke-width:8;
+stroke-linejoin:miter; stroke-linecap:butt;
+"/>
+<!-- Text -->
+<text xml:space="preserve" x="5196" y="4015" fill="#000000"  font-family="Times" font-style="normal" font-weight="normal" font-size="303" text-anchor="start">VME64xCore</text>
+<!-- Text -->
+<g transform="translate(3070,7322) rotate(-90.00021046)" >
+<text xml:space="preserve" x="0" y="0" fill="#000000"  font-family="Times" font-style="normal" font-weight="normal" font-size="278" text-anchor="start">VME64x Bus</text>
+</g><!-- Text -->
+<g transform="translate(10157,7086) rotate(-90.00021046)" >
+<text xml:space="preserve" x="0" y="0" fill="#000000"  font-family="Times" font-style="normal" font-weight="normal" font-size="278" text-anchor="start">Wishbone Bus</text>
+</g><!-- Text -->
+<text xml:space="preserve" x="8503" y="4960" fill="#000000"  font-family="Times" font-style="normal" font-weight="normal" font-size="278" text-anchor="start">Irq</text>
+<!-- Text -->
+<text xml:space="preserve" x="5196" y="4724" fill="#000000"  font-family="Times" font-style="normal" font-weight="normal" font-size="278" text-anchor="start">cr/csr space</text>
+<!-- Text -->
+<text xml:space="preserve" x="5196" y="5669" fill="#000000"  font-family="Times" font-style="normal" font-weight="normal" font-size="278" text-anchor="start">func match</text>
+<!-- Text -->
+<text xml:space="preserve" x="5196" y="6614" fill="#000000"  font-family="Times" font-style="normal" font-weight="normal" font-size="278" text-anchor="start">user cr</text>
+<!-- Text -->
+<text xml:space="preserve" x="5196" y="7795" fill="#000000"  font-family="Times" font-style="normal" font-weight="normal" font-size="278" text-anchor="start">vme_bus (FSM)</text>
+</g>
+</svg>

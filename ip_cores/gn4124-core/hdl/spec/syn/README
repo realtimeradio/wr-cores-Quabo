@@ -1,0 +1,27 @@
+This example project was last tested on March 18st 2016,
+using hdlmake (develop branch).
+
+A binary of the generated gateware (spec_gn4124_test.bin) is stored in the
+files section of the project:
+http://www.ohwr.org/projects/gn4124-core/files
+
+Procedure to generate the gateware binary:
+$ cd <gn4124 core dir>/hdl/spec/syn/
+$ hdlmake fetch
+$ hdlmake
+$ make
+
+Memory map:
+
+0x00000 : GN4124 DMA configuration registers
+          -> See GN4124 doc for register mapping.
+0x40000 : Status registers
+      0 : 0xDEADBABE
+      4 : 0xBEEFFACE
+      8 : 0x12345678
+      C : Bit 0 = P2L PLL lock status (1=pll locked)
+0x80000 : Control regiters
+      0 : Not connected internally, can be used to perform r/w
+      4 : Not connected internally, can be used to perform r/w
+      8 : Not connected internally, can be used to perform r/w
+      C : Bits 0 and 1 connected to SPEC front-panel LEDs (1=LED ON)

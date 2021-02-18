@@ -1,0 +1,27 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../ip_cores/general-cores/modules/genrams/genram_pkg.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/spartan6/gn4124_core_pkg.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/dma_controller.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/dma_controller_wb_slave.vhd" \
+"../../../../../../ip_cores/general-cores/modules/common/gencores_pkg.vhd" \
+"../../../../../../ip_cores/general-cores/modules/common/gc_pulse_synchronizer.vhd" \
+"../../../../../../ip_cores/general-cores/modules/common/gc_sync_ffs.vhd" \
+"../../../../../../ip_cores/general-cores/modules/common/gc_sync_register.vhd" \
+"../../../../../../ip_cores/general-cores/modules/genrams/generic/generic_async_fifo.vhd" \
+"../../../../../../ip_cores/general-cores/modules/genrams/common/inferred_async_fifo.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/l2p_arbiter.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/l2p_dma_master.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/spartan6/l2p_ser.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/p2l_decode32.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/spartan6/p2l_des.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/p2l_dma_master.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/spartan6/serdes_1_to_n_clk_pll_s2_diff.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/spartan6/serdes_1_to_n_data_s2_se.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/spartan6/serdes_n_to_1_s2_diff.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/spartan6/serdes_n_to_1_s2_se.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/wbmaster32.vhd" \
+"../../../../../../ip_cores/gn4124-core/hdl/gn4124core/rtl/spartan6/gn4124_core.vhd" \
+
+# Do not sort compile order
+nosort

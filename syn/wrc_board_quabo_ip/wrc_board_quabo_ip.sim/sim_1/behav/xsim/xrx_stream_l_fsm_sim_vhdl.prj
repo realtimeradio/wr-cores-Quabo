@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../ip_cores/general-cores/modules/genrams/genram_pkg.vhd" \
+"../../../../../../modules/wrx_streamers_light/delay_pkg.vhd" \
+"../../../../wrc_board_quabo_ip.srcs/sources_1/imports/wr_streamers/delay_pkg.vhd" \
+"../../../../wrc_board_quabo_ip.srcs/sources_1/new/delay_pkg.vhd" \
+"../../../../wrc_board_quabo_ip.srcs/sources_1/imports/wr_streamers/delay_six_cyc.vhd" \
+"../../../../../../modules/wr_streamers/dropping_buffer.vhd" \
+"../../../../wrc_board_quabo_ip.srcs/sources_1/new/xrx_stream_l_fsm.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Apr 27 15:06:26 2019
+# Process ID: 4685
+# Current directory: /media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo/syn/wrc_board_quabo_ip/wrc_board_quabo_ip.runs/synth_1
+# Command line: vivado -log wrc_board_quabo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source wrc_board_quabo.tcl
+# Log file: /media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo/syn/wrc_board_quabo_ip/wrc_board_quabo_ip.runs/synth_1/wrc_board_quabo.vds
+# Journal file: /media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo/syn/wrc_board_quabo_ip/wrc_board_quabo_ip.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source wrc_board_quabo.tcl -notrace

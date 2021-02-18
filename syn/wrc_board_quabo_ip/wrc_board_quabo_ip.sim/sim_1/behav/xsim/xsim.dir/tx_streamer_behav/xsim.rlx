@@ -1,0 +1,12 @@
+
+{ 
+    crc :  4450896333791039752  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto a3a32cb82f5f42009bfb8d8145ff46ac --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tx_streamer_behav xil_defaultlib.tx_streamer" , 
+    buildDate : "Dec  6 2018" , 
+    buildTime : "23:39:36" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/tx_streamer_behav/xsimk\"   \"xsim.dir/tx_streamer_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/tx_streamer_behav/obj/xsim_1.lnx64.o\" -L\"/home/wei/Software/Vivado/install/Vivado/2018.3/lib/lnx64.o\" -lrdi_simulator_kernel  -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

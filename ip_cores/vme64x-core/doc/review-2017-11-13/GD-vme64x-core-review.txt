@@ -1,0 +1,121 @@
+- top VME64x core entity is called "VME64xCore_Top" while
+  svec/hdl/top/vmecore_test/ instantiates vme64xcore_top. Make it the same (all
+  lower-case?) for easier grepping.
+  Done.
+- check comments in all the files, some of them are not complete or out of date
+  OK.
+- shall we have some reference design in the VME64x core repo? With necessary
+  constraints for the clock and putting registers in IOBs (like vme_irq_n_o in
+  svec vmecore_test)
+  Done. Points to the svec repo.
+- vme64x_pack.vhd -> we usually call these things *_pkg.vhd
+  Done.
+- from files headers remove _last changes_ and _TODO_ sections, anyway, they are
+  empty.
+  OK.
+- i'd prefer to have signals without "s_" prefix, but this is part of a larger
+  coding style discussion.
+  In this design most of the signals are with "s_" prefix, but some are also
+  without (e.g. in VME_IRQ_Controller.vhd)
+  'Detail'.
+- how about using t_vme64x_in and t_vme64x_out types inside the design to make
+  the core more compact and having only an std_logic wrapper for simulations?
+  Done. Good convention to be adopted.
+- vme64x_pack.vhd and xvme64x_core_pkg.vhd should be merged into one package
+  Done.
+
+------------------------
+--  vme64x_pack.vhd   --
+------------------------
+- line 44:
+  rename c_CLOCK_PERIOD to something like c_default_CLK_PERIOD
+  because as far as I've seen in the code, that's what it is, a default clk
+  period value assigned to g_CLOCK_PERIOD if user does not overwrite it.
+  Done. Default removed.
+- line 55:
+  c_ADEM_M is a type not a constant, rename it to t_ADEM_M
+  Done.
+- cleanup, remove types that are not used e.g. c_ADER_C_XAM or c_ADER_C_AM
+  Done. Commented as unused.
+
+------------------------
+-- VME64xCore_Top.vhd --
+------------------------
+- if g_WB_DATA_WIDTH must be 32-bit, then don't make it a generic, just use
+  everywhere c_DATA_WIDTH declared in the package
+  Done. Removed.
+- the same for g_WB_ADDR_WIDTH (see also comment for VME_bus.vhd)
+  Done. Removed.
+- prefix Wishbone ports with "wb_"
+  Done.
+- if you make VME_bus.vhd with reset active low, then you don't need s_reset
+  signal anymore (see also comment in VME_bus.vhd).
+  Done.
+
+------------------------
+--    VME_bus.vhd     --
+------------------------
+- prefix Wishbone ports with "wb_"
+  Done.
+- either fix adr_o handling or remove g_WB_ADDR_WIDTH because setting anything
+  else than 32-bit to g_WB_ADDR_WIDTH will result in synthesis/simulation error
+  Done.
+- why reset is active high (rst_i) and not active low like in all other modules?
+  Done.
+- constant num_latchDS misses "c_" prefix
+  Done.
+- line 431: 3 nested if-s. How about simplifying to:
+  if decode_done_i = '1' and decode_sel_i = '1' and module_enable_i = '1'then
+    (...)
+  elsif decode_done_i = '1' then
+    s_mainFSMstate <= WAIT_END;
+  else
+    s_mainFSMstate <= DECODE_ACCESS;
+  end if;
+  'As you like'.
+- line 461:
+  should you check if s_DS_latch_count >0 before decrementing it by 1?
+  if for whatever reason you stay longer in DECODE_ACCESS waiting for
+  decode_done_i='1' you might end up going to WAIT_FOR_DS when your counter is
+  already 0, then after your decrement your counter rolls over
+  Done.
+
+--------------------------
+-- VME_CR_CSR_Space.vhd --
+--------------------------
+- line 323:
+  can use xor_reduce(vme_ga_i) from std_logic_misc instead of manually xoring
+  all the bits
+  No, because std_logic_misc is not standard.
+
+--------------------------
+-- VME_Funct_Match.vhd  --
+--------------------------
+- line 94:
+  That's a weird way of describing registers in the process (at least to me).
+  Instead of clearing the registers at every risinge_edge, and having null in
+  rst_n_i='0', please clear the registers when rst_n_i ='0' and add another
+  "else" if you want to clear them every time decode_start_i='0'.
+  Done.
+- line 133:
+  What's this construction??:
+  mask(c_ADEM_M) := g_ADEM(s_function_sel)(c_ADEM_M);
+  where c_ADEM_M is a subtype is integer range 31 downto  8;
+  Covered.
+
+----------------------------
+-- VME_IRQ_Controller.vhd --
+----------------------------
+- reset_n_i, we always name it rst_n_i
+  Done.
+- line 170:
+  very very tiny thing, retry_count can be cleared always when we're in
+  WAIT_IRQ (not only inside the _if_). This simplifies an already simple fsm.
+  'Tiny'.
+
+----------------------------
+--       simulation       --
+----------------------------
+- general-cores submodule in wrong location. Move it from hdl/sim to
+  ip_cores/general-cores like we have for all the other repos.
+  Done. Cf Maciej.

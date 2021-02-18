@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../ip_cores/general-cores/modules/wishbone/wb_lm32/src" --include "../../../../../../ip_cores/general-cores/modules/wishbone/wb_spi" \
+"../../../../wrc_board_quabo_ip.srcs/sim_1/new/xrx_stream_l_fsm_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

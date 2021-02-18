@@ -1,0 +1,1 @@
+-wto "a3a32cb82f5f42009bfb8d8145ff46ac" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "tx_streamer_behav" "xil_defaultlib.tx_streamer" -log "elaborate.log" 

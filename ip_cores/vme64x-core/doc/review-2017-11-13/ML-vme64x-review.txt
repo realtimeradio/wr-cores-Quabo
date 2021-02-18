@@ -1,0 +1,333 @@
+Review of VME64x core, Maciej Lipinski / 2017-11-13
+
+Note:
+- line numbers are relative to branch tgingold-dev. Lines are indicated by L:
+- Some changes suggested by me are committed to branch ml-vme64x_review
+
+--------------------------------------------------------------------------------
+General remarks (I started by trying to simulate the core, so some remarks
+about simulatin will come first):
+
+0.1. In principle, if simulation is provided in a project, our (non-written)
+     convention to get the simulation running (without reading any info) would
+     be to do the following:
+
+     git clone
+     git submodule init
+     git submodule update
+     cd hdl/testbench
+     hdlmake
+     make
+     do run.do
+
+     this is not the case and there is no README that is helpful in discovering
+     how to make the simulation. Moreover, the existing README in the main
+     folder is out-of-date.
+     I see several improvements that are spread among several points below.
+
+Done: let's follow this convention, with a README.
+0.2. I would recommend to follow our folder convention (which used to be on
+     ohwr.org and which is now gone, probably due to migration, so I copy+paste
+     it at the end of this file). Using this convention would require the
+     following changes:
+     a) change /documents to /doc
+Done.
+     b) change hdl/sim to hdl/testbench
+Done.
+     c) keep vme64x_bfm in hdl/sim/vme64x_bfm if this is a
+        model of the vme64x (I do not know because it is undocumented)
+Done.
+0.3. the arrangement of simple_tb is confusing: first I thought that the folder
+     "modelsim" contains some modelsim-specific stuff. Again, how should I know
+     if there is no description/documentation/README. I'd recommend to do one
+      of the following:
+     a) move content from hdl/sim/simple_tb/modelsim/ to hdl/sim/simple_tb
+        (preferred if there are no plans to add simulation for other tools)
+     b) add README explaining this structure
+Done: Add a README.
+0.4. hdl/sim/simple_tb/modelsim/run_all.sh is not working [committed fix]
+Done (merged).
+0.5. It would be extremely useful to have some waveforms when running simulation.
+     I recommend doing one of the following:
+     a) modify run_all.sh to show the run simulations in waveform
+     b) add run.do script that runs one of the testbench cases [committed]
+     It is very helpful to the developer to push a wave.do with most important
+     signals. Ideally, the documentation provided to the user would match the
+     waveform so that when a developer runs the simulation, he can easily map
+     the output to the documentation.
+Done: your run.do file was cherry-picked.
+0.6. Add general-cores as submodule in /hdl/ip_cores [committed]
+     even if vme64x is never used standalone and general-cores are used in this
+     project only when running simulation, I would still include it as submodule
+     in ip_cores for a number of reasons:
+     a) when someone takes the core to us in his/her project, it is useful to
+        know which ip_cores and which version he/she needs
+     b) to make the simulation easier to to run
+     c) it seems to be a general policy
+Done.
+0.7. README in  the main directory is completely out of date !
+Done.
+0.8. /documention folder:
+     - the notes from the 2012 review should stay,
+     Still in the repo.
+     - a new folder for the current review should be added.
+Done.
+     - I would guess that some of the removed documents will be replaced with
+       updated versions. If this is not the case, it seems to me that the
+       currently provided documentation (the one reminding in the folder) is
+       NOT sufficient. At least, the vme64x_user_manual should be revived.
+       Moreover, the documentation in the project files seems to be out-of-date.
+    OK.
+0.9. consider refactoring as follows:
+     (see https://www.ohwr.org/attachments/554/VHDLcoding.pdf)
+     - the convention of prefix s_ for signals is generally avoided, remove s_
+     - the convention of using the suffix _a for asynchronous (input) signals is
+       useful and used, add
+0.10. packages:
+      - I do not understand why you need two separate packages for the
+        VME64xCore_Top and its wrapper xvme64x_core. I would recommend to
+        merge vme64x_pack.vhd and xvme64x_core_pkg.vhd into one file/pacakge
+Done.
+      - a "private" package seems like a good idea and something that is used in
+        other projects. I would recommend to add vme64x_core_priv_pkg.vhd. Thanks
+        to this, you will be able to "use" this package and import the modules
+        from it, rather than having to call directly work.module
+        (as suggested in a latter comment).
+I don't see the point of adding extra code.
+0.11. the naming of the files in hdl/rtl is very chaotic:
+      - Ideally, and by the convention used in other projects, the name of a
+        wrapper differs from the name of the module it wrapps only by the suffix
+        "x", e.g.: wr_core.vhd and xwr_core.vhd, wrsw_rtu.vhd and xwrsw_rtu.vhd.
+        I'd recommend to follow this convention
+Done.
+      - the capitalization and using (or not using) of "_" is very inconsistent,
+        please fix it.
+Done.
+0.12. In the description of all files, there exists section "dependencies", It
+      does not seem to be appropriately filled in. Remove it from all files or
+      fill in appropriately.I recommend the former.
+      Done: Removed.
+0.13.  git blame shows that there is not much left from the original code of
+      Pablo and Davide, add the other contributors as authors to appropriate
+      files (possibly all)
+      Done (Authors removed).
+0.14. The descriptions in the files (which is currently the only documentation)
+      is written in poor English that is hard to understand. It seems to be
+      out-of-date. It should be thoroughly reviewed. In comments to particular
+      files I point out unclear text. I also included some corrections in
+      commits
+      Updated.
+
+--------------------------------------------------------------------------------
+xvme64x_core_pkg.vhd and vme64x_pack.vhd:
+--------------------------------------------------------------------------------
+1.1 rename both, merge packages, see 0.11
+Done.
+
+--------------------------------------------------------------------------------
+VME64xCore_Top.vhd
+--------------------------------------------------------------------------------
+2.1 [L:14-78]the description is written badly. I improved fragments in which I
+    knew what author wanted to say. The fragments that need to be explained
+    better are listed below:
+    a) input or output
+    --   The Input signals from the WB bus aren't registered indeed the WB is a
+    --   synchronous protocol and some registers in the WB side will introduce a
+    --   delay that make impossible reproduce the WB PIPELINED protocol.
+    TBC: in the UG.
+
+    b) why do you say about FIFO if it is not implemented?????
+    --   The WB protocol is more faster than the VME protocol so to make independent
+    --   the two protocols a FIFO memory can be introduced.
+    --   The FIFO is necessary only during 2eSST access mode.
+    --   During the block transfer without FIFO the VME_bus accesses directly the Wb
+    --   bus in Single pipelined read/write mode. If this is the only Wb master this
+    --   solution is better than the solution with FIFO.
+    --   In this base version of the core the FIFO is not implemented indeed the 2e
+    --   access modes aren't supported yet.
+    Done (Removed).
+
+    c) could you elaborate on this:
+    --   To access the CR/CSR space: AM = 0x2f --> this is A24 addressing type,
+    --   SINGLE transfer type. Base Address = Slot Number.
+    In the UG.
+2.2 [L:101]the document says "-- last changes: see log." -> what log??? you mean
+    git? (it is similar in many files)
+    Log removed.
+2.3 [L:367]use new private library for internal components, do not refer directly
+    to "work.VME_Funct_Match" etc
+Why ?
+    No components.
+2.4 [L:367-397] There is a dedicated module that is used in many projects for
+    synchronizing input asynchronous signals. It seems to include the same
+    functionality as the module used here gc_sync_register. My suggestion is
+    to use the same module as the other projects and think about removing
+    gc_sync_register from general cores.
+    Less warnings than gc_sync_ffs.
+
+--------------------------------------------------------------------------------
+VME_bus.vhd
+--------------------------------------------------------------------------------
+3.1 Again, the description is poorly written, i.e.:
+    a) in the description below [L: 34-35], do you mean the "MAIN FSM"
+       component? you should add in the text a name corresponding to the drawing:
+       --   The Access decode component decodes the address to check if the board is
+       --   the responding Slave. This component is of fundamental importance, indeed
+       --   only one Slave can answer to the Master!
+    Removed.
+    b) in the top file, it is written that WR Pipelined is not possible, here
+       you say it is, I do not understand
+        --   In the right side you can see the WB Master who implements the Wb Pipelined
+        --   single read/write protocol.
+    Removed.
+    c) I do not understand this:
+        --   [...]; only one FPGA at time can
+        --   carry the vme64x core or other similar VME slave core.
+    Removed.
+3.2 the description of behavior concerning VME_AS_n_i is inconsistent with
+    the code [L:304 and 355]. In particular, the description says about
+    acting upon rising/falling edge, while the condition is not detecting edge.
+    It seems a particularly important difference in L:355 where the FSM will be
+    re-entered when VME_AS_n_i is kept LOW all the time. I do not know which
+    behavior is correct (possibly, the description is wrong and the
+    implementation OK)
+    Done.
+3.3 [L:497] the input signal VME_DS_n_i is already synchronized with the
+    clock domain. There should be no metastability problem. And if there was
+    metastability problem, such a metastability would affect also VME_IACKIN_n_i
+    and VME_IACK_n_i that go through the same synchronization chain and are
+    used directly in the FSM. I would remove the comment.
+    Explained: DS is 2 signals.
+
+--------------------------------------------------------------------------------
+VME_Funct_Match:
+--------------------------------------------------------------------------------
+4.1 [L: 13] missing description, at least one sentence, please :)
+    Done.
+4.2 [L:94-114]: the code optimization in this process deteriorates code
+    readability. I would recommend to rewrite the code a bit to make it clear
+    what happens,i.e.:
+    process (clk_i)
+    begin
+     if rising_edge(clk_i) then
+        if rst_n_i = '0' or decode_start_i = '0' then
+          s_function_sel <= 0;
+          s_function_sel_valid <= '0';
+          s_decode_start_1 <= '0';
+        elsif decode_start_i = '1' then
+          s_decode_start_1 <= '1';
+          for i in 0 to 7 loop
+            if s_function(i) = '1' then
+                s_function_sel <= i;
+                s_function_sel_valid <= s_ader_am_valid(i);
+                exit;
+            end if;
+          end loop;
+        end if;
+      end if;
+    end process;
+Done.
+
+--------------------------------------------------------------------------------
+VME_IRQ_Controller.vhd
+--------------------------------------------------------------------------------
+5.1 The description is not only poorly written but also misleading. I cannot find
+    in the VHDL code the FSM that is described, i.e.:
+    a) I really do not understand this [L:24-31]
+    --   4) When detects VME_IACKIN_n_i = '0' and the Interrupt Handler initiates
+    --      the Interrupt cycle by asserting AS,the Interrupt Controller check if it
+    --      is the responding interrupter. Indeed before responding to an interrupt
+    --      acknowledge cycle the interrupter shall have an interrupt request
+    --      pending, shall check if the level of that request match the level
+    --      indicated on the address lines A1, A2 and A3,the data transfer width
+    --      during the interrupt acknowledge cycle should be equal or greater than
+    --      the size the it can respond with, and it shall receive a falling edge on
+    --      its IACKIN*.
+    b) I do not understand this [L:37-38]
+    --      [...], it should pass a
+    --      falling edge on down the daisy-chain so other interrupters can respond.
+    c) I do not understand this [L:59-61]
+    --  The interrupter wait the IACKIN falling edge in the IRQ state, so if the
+    --  interrupter don't have interrupt pending for sure it will not respond
+    --  because it is in IDLE.
+    Done. Doc in UG.
+5.2 [L:156-158] I do not understand the second part of this sentence
+    -- Interrupts are automatically masked for g_RETRY_TIMEOUT (i.e. 1 ms) once
+    -- they are acknowledge by the interrupt handler until they are deasserted
+    -- by the interrupter.
+    TODO: rephrase.
+5.3 [L:159-225] It seems to me that these two process should be a single FSM
+    Works both ways.
+5.4 [L:190] either remove "fsm" from the process name, or make it a real FSM.
+Done.
+
+--------------------------------------------------------------------------------
+VME_User_CSR.vhd
+--------------------------------------------------------------------------------
+6.1 The information in this description should be also in the top module
+    and/or in any other documentation that will be created. A developer who
+    takes a top module should not be forced to go here to read this info
+    Doc in UG.
+
+
+--------------------------------------------------------------------------------
+folder convention that used to be and should be on ohwr.org. we agreed on this
+convention ~year ago during WR-BTrain review
+--------------------------------------------------------------------------------
+MyProj
+     |
+     |-circuit_board
+     |-doc
+     |-hdl
+     |   |-ip_cores
+     |   |        |-wr-cores      (submodule)
+     |   |        |-general-cores (submodule)
+     |   |
+     |   |-platform
+     |   |        |-Xilinx
+     |   |        |-Altera
+     |   |
+     |   |-rtl
+     |   |   |-
+     |   |   |-moduleX
+     |   |   |-moduleY
+     |   |           |-wb_desc_file_y.wb
+     |   |           |-wb_vhdl_file_y.vhd
+     |   |           |-wb_vhld_file_y_pkg.vhd
+     |   |   |-moduleZ
+     |   |           |-wb_desc_file_x.wb
+     |   |           |-wb_vhdl_file_x.vhd
+     |   |           |-wb_vhld_file_x_pkg.vhd
+     |   |
+     |   |-syn
+     |   |    |-myStuff
+     |   |          |-Manifest.py
+     |   |          |-top_z.xise
+     |   |
+     |   |
+     |   |-testbench
+     |   |         |-include
+     |   |         |       |-regs
+     |   |         |       |    |-wb_vhdl_file_x.vh
+     |   |         |       |    |-wb_vhdl_file_y.vh0
+     |   |         |       |-model_x
+     |   |         |       |-model_y
+     |   |         |-testMyStuff
+     |   |         |           |-myStuff.svh
+     |   |         |-testModuleOfMyStuff
+     |   |         |           |-testModule.svh
+     |   |-top
+     |   |    |-svec
+     |   |         |-Manifest.py
+     |   |         |-svec_top.vhd
+     |   |         |-svec_top.ucf
+     |   |    |-myBoard
+     |
+     |-software
+     |        |-FPGA
+     |        |-embedded
+     |        |-host
+     |-mechanics
+
+reference:
+http://www.ohwr.org/projects/fmc-delay-1ns-8cha/repository

@@ -1,0 +1,2 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1-vivado-Streamers-light/wr-cores-Quabo/syn/wrc_board_quabo_ip/wrc_board_quabo_ip.srcs/sources_1/new/xrx_stream_l_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xrx_stream_l_fsm'

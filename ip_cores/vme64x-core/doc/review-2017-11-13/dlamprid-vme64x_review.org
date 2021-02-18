@@ -1,0 +1,47 @@
+* General notes
+- pull dlamprid-vme64x_review for both the core and the SVEC demo (vmecore_test)
+  + adjust/merge as you see fit
+  Done
+- [Update]/[Delete] top-level README.txt?
+  Done
+- [Update] HDL headers
+  OK.
+- [Update]/[Delete]/[Move to user manual] header comments with technical explanations?
+  OK.
+- Good opportunity to rename files, entities and instances. eg:
+  + pack or pkg?
+  _pkg (same name as the design unit name).
+  + capital or small case file names?
+  The same case, lower case.
+  + ...
+  Done.
+- does not strictly follow proposed folder structure
+  See Maciej comment
+
+* VME64x core
+- get rid of SVEC_ID, CERN_ID etc from package and default generic values
+  Done. OK for default generic
+- what happens if the c_CLOCK_PERIOD is wrong? maybe it's better to get rid of it, set g_CLOCK_PERIOD by default to zero and assert that it is set to something else by user
+  Done. OK.
+- shal we name/label all processes?
+  NO, but...
+** VME64xCore_top.vhd
+- Add generic/constant for number of supported functions and use it to limit size of ader/adem
+  arrays etc, in order to reduce number of warnings in ISE (from ~450 to ~50)
+  Done.
+- gc_sync_register: does it even make sense? Slide #95 of NASA radiation tolerant design presentation:
+  https://indico.cern.ch/event/663761/contributions/2710422/attachments/1537821/2410163/Berg_SynchronousDesign_2017.pdf
+  No problem, discussion about width postponed.
+*** VME_CR_CSR_Space.vhd
+- delete unused port vme_sysfail_ena_o?
+  Done.
+
+* Simulation
+- how am I supposed to run it? A README would help
+  Done.
+- why open the GUI at the end of make?
+  Done.
+- why keep around VME BFM if you are not using it? Why the SVEC-specific file in the VME BFM?
+  Removed. To be restored.
+- why not (also) GHDL if Modelsim is not necessary?
+  Shouldn't be hard, excercise let to the reader.

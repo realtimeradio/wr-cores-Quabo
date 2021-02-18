@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 16 10:41:11 2019" VIVADOVERSION="2018.3">
+
+  <SYSTEMINFO ARCH="kintex7" DEVICE="7k160t" NAME="test" PACKAGE="fbg676" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS/>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="5" FULLNAME="/wrc_board_quabo_Light_0" HWVERSION="4.2" INSTANCE="wrc_board_quabo_Light_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="wrc_board_quabo_Light" VLNV="user.org:user:wrc_board_quabo_Light:4.2">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="g_dpram_initf" VALUE="/home/wei/Desktop/wrc_phy16.bram"/>
+        <PARAMETER NAME="g_simulation" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="test_wrc_board_quabo_Light_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk_20m_vcxo_i" SIGIS="undef"/>
+        <PORT DIR="I" NAME="clk_125m_gtx_n_i" SIGIS="undef"/>
+        <PORT DIR="I" NAME="clk_125m_gtx_p_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="plldac_sclk_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="plldac_din_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="pll25dac_cs_n_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="pll20dac_cs_n_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sfp_txp_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sfp_txn_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="sfp_rxp_i" SIGIS="undef"/>
+        <PORT DIR="I" NAME="sfp_rxn_i" SIGIS="undef"/>
+        <PORT DIR="I" NAME="sfp_mod_def0_i" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="sfp_mod_def1_b" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="sfp_mod_def2_b" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sfp_rate_select_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="sfp_tx_fault_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="sfp_tx_disable_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="sfp_los_i" SIGIS="undef"/>
+        <PORT DIR="IO" NAME="onewire_b" SIGIS="undef"/>
+        <PORT DIR="I" NAME="uart_rxd_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="uart_txd_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="spi_ncs_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="spi_mosi_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="spi_miso_i" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="wrs_tx_data_i" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="wrs_tx_valid_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="wrs_tx_dreq_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="wrs_tx_last_i" SIGIS="undef"/>
+        <PORT DIR="I" NAME="wrs_tx_flush_i" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="47" NAME="mac_local_tx" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="47" NAME="mac_target_tx" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="ethertype_tx" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="qtag_ena_tx" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="11" NAME="qtag_vid_tx" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="qtag_prio_tx" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="wrs_rx_first_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="wrs_rx_last_o" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="wrs_rx_data_o" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="wrs_rx_valid_o" SIGIS="undef"/>
+        <PORT DIR="I" NAME="wrs_rx_dreq_i" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="47" NAME="mac_local_rx" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="47" NAME="mac_remote_rx" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="ethertype_rx" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="accept_broadcasts_rx" SIGIS="undef"/>
+        <PORT DIR="I" NAME="filter_remote_rx" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="27" NAME="fixed_latency_rx" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset_i" SIGIS="rst"/>
+        <PORT DIR="I" NAME="clk_ext_10m_p_i" SIGIS="undef"/>
+        <PORT DIR="I" NAME="clk_ext_10m_n_i" SIGIS="undef"/>
+        <PORT DIR="I" NAME="pps_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="pps_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="clk_sys_o" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="user_sfp" TYPE="INITIATOR" VLNV="user.org:user:sfp:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="sfp_txp_o" PHYSICAL="sfp_txp_o"/>
+            <PORTMAP LOGICAL="sfp_txn_o" PHYSICAL="sfp_txn_o"/>
+            <PORTMAP LOGICAL="sfp_rxp_i" PHYSICAL="sfp_rxp_i"/>
+            <PORTMAP LOGICAL="sfp_rxn_i" PHYSICAL="sfp_rxn_i"/>
+            <PORTMAP LOGICAL="sfp_mod_def0_i" PHYSICAL="sfp_mod_def0_i"/>
+            <PORTMAP LOGICAL="sfp_mod_def1_b" PHYSICAL="sfp_mod_def1_b"/>
+            <PORTMAP LOGICAL="sfp_mod_def2_b" PHYSICAL="sfp_mod_def2_b"/>
+            <PORTMAP LOGICAL="sfp_rate_select_o" PHYSICAL="sfp_rate_select_o"/>
+            <PORTMAP LOGICAL="sfp_tx_fault_i" PHYSICAL="sfp_tx_fault_i"/>
+            <PORTMAP LOGICAL="sfp_tx_disable_o" PHYSICAL="sfp_tx_disable_o"/>
+            <PORTMAP LOGICAL="sfp_los_i" PHYSICAL="sfp_los_i"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="user_wrs_tx" TYPE="INITIATOR" VLNV="user.org:user:wrs_tx:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="wrs_tx_data_i" PHYSICAL="wrs_tx_data_i"/>
+            <PORTMAP LOGICAL="wrs_tx_valid_i" PHYSICAL="wrs_tx_valid_i"/>
+            <PORTMAP LOGICAL="wrs_tx_dreq_o" PHYSICAL="wrs_tx_dreq_o"/>
+            <PORTMAP LOGICAL="wrs_tx_last_i" PHYSICAL="wrs_tx_last_i"/>
+            <PORTMAP LOGICAL="wrs_tx_flush_i" PHYSICAL="wrs_tx_flush_i"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="user_falsh_spi" TYPE="INITIATOR" VLNV="user.org:user:falsh_spi:1.1">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="spi_ncs_o" PHYSICAL="spi_ncs_o"/>
+            <PORTMAP LOGICAL="spi_mosi_o" PHYSICAL="spi_mosi_o"/>
+            <PORTMAP LOGICAL="spi_miso_i" PHYSICAL="spi_miso_i"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="user_wrs_tx_cfg" TYPE="INITIATOR" VLNV="user.org:user:wrs_tx_cfg:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="mac_local_tx" PHYSICAL="mac_local_tx"/>
+            <PORTMAP LOGICAL="mac_target_tx" PHYSICAL="mac_target_tx"/>
+            <PORTMAP LOGICAL="ethertype_tx" PHYSICAL="ethertype_tx"/>
+            <PORTMAP LOGICAL="qtag_ena_tx" PHYSICAL="qtag_ena_tx"/>
+            <PORTMAP LOGICAL="qtag_vid_tx" PHYSICAL="qtag_vid_tx"/>
+            <PORTMAP LOGICAL="qtag_prio_tx" PHYSICAL="qtag_prio_tx"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="user_wrs_rx" TYPE="INITIATOR" VLNV="user.org:user:wrs_rx:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="wrs_rx_first_o" PHYSICAL="wrs_rx_first_o"/>
+            <PORTMAP LOGICAL="wrs_rx_last_o" PHYSICAL="wrs_rx_last_o"/>
+            <PORTMAP LOGICAL="wrs_rx_data_o" PHYSICAL="wrs_rx_data_o"/>
+            <PORTMAP LOGICAL="wrs_rx_valid_o" PHYSICAL="wrs_rx_valid_o"/>
+            <PORTMAP LOGICAL="wrs_rx_dreq_i" PHYSICAL="wrs_rx_dreq_i"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="user_wrs_rx_cfg" TYPE="INITIATOR" VLNV="user.org:user:wrs_rx_cfg:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="mac_local_rx" PHYSICAL="mac_local_rx"/>
+            <PORTMAP LOGICAL="mac_remote_rx" PHYSICAL="mac_remote_rx"/>
+            <PORTMAP LOGICAL="ethertype_rx" PHYSICAL="ethertype_rx"/>
+            <PORTMAP LOGICAL="accept_broadcasts_rx" PHYSICAL="accept_broadcasts_rx"/>
+            <PORTMAP LOGICAL="filter_remote_rx" PHYSICAL="filter_remote_rx"/>
+            <PORTMAP LOGICAL="fixed_latency_rx" PHYSICAL="fixed_latency_rx"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="user_uart" TYPE="INITIATOR" VLNV="user.org:user:uart:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="uart_rxd_i" PHYSICAL="uart_rxd_i"/>
+            <PORTMAP LOGICAL="uart_txd_o" PHYSICAL="uart_txd_o"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

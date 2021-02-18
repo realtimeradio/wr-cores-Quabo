@@ -1,0 +1,16 @@
+files = ["streamers_pkg.vhd",
+         "xrtx_streamers_stats.vhd",
+         "xtx_streamer.vhd",
+         "tx_streamer.vhd",
+         "xrx_streamer.vhd",
+         "rx_streamer.vhd",
+         "escape_inserter.vhd",
+         "escape_detector.vhd",
+         "dropping_buffer.vhd",
+         "wr_streamers_wbgen2_pkg.vhd", 
+         "xwr_streamers.vhd",
+         "wr_streamers_wb.vhd",
+         "streamers_priv_pkg.vhd",
+         "xtx_streamers_stats.vhd",
+         "xrx_streamers_stats.vhd"
+         ]
